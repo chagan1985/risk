@@ -1,6 +1,7 @@
 from country import Country
+from player import Player
 
-
+# TODO make a JSON file to hold country data as this should never change
 countries = [
     {
         "name": "Japan",
@@ -22,4 +23,4 @@ class GameBoard:
 
     def show_list_of_countries(self):
         for country in self._board:
-            print(country.get_name())
+            country.show_country()
