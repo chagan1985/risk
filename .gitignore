@@ -1,0 +1,8 @@
+# Ignore log files
+*.log
+
+# Ignore Python bytecode cache
+game/__pycache__/
+*.pyc
+*.pyo
+*.pyd

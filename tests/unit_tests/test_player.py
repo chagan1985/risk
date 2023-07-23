@@ -5,9 +5,10 @@ from game.player import Player
 class TestPlayer:
     def test_create(self):
         ''' Test player init '''
-        player = Player("Chris", "Red")
+        player = Player("Chris", "Red", "USER")
         assert player._name == "Chris"
         assert player._colour == "Red"
+        assert player._player_type == "USER"
 
     def test_show_player(self, capfd):
         ''' Test show_player produces the expected print statement '''
@@ -15,7 +16,7 @@ class TestPlayer:
         test_colour = "Orange"
         expected_player_text = f"Player {test_name} is using {test_colour}"
 
-        player = Player(test_name, test_colour)
+        player = Player(test_name, test_colour, "USER")
         player.show_player()
 
         captured = capfd.readouterr()
